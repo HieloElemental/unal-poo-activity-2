@@ -1,5 +1,5 @@
 /*
- * Ejercico Propuesto No 
+ * Cap 3 - Ejercico Propuesto No 21
  */
 
 package unal_poo_activity_2;
@@ -12,8 +12,20 @@ import java.util.Scanner;
  */
 public class Unal_poo_activity_2 {
     public static Scanner scanner = new Scanner(System.in);
+  
+    public static void main(String[] args){
+        double[] sides = new double[3];
+        for(int i = 0; i < sides.length; i++) {
+            sides[i] = getDouble("Side " + String.valueOf(i + 1));
+        }
 
-    public static void main(String[] args) {
-        System.out.println("Hello World!");
+        Triangle triangle = new Triangle(sides);
+
+        triangle.printTriangleMeasures();
+    }
+
+    public static double getDouble(String message) {
+        System.out.print(message + ": ");
+        return scanner.nextDouble();
     }
 }
