@@ -1,5 +1,5 @@
 /*
- * Ejercico Propuesto No 
+ * Cap 3 - Ejercico Propuesto No 19
  */
 
 package unal_poo_activity_2;
@@ -14,6 +14,13 @@ public class Unal_poo_activity_2 {
     public static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        EquilateralTriangle equilateralTriangle = new EquilateralTriangle(getDouble("Triangle's side")); 
+        equilateralTriangle.printTriangleMeasures();
     }
+
+    public static double getDouble(String message) {
+        System.out.print(message + ": ");
+        return scanner.nextDouble();
+    }
+
 }
